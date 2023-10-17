@@ -34,6 +34,13 @@ yarn android
 
 ### For iOS
 
+Make sure to install your pods with the following commands.
+
+```bash
+cd ios
+pod install
+```
+
 ```bash
 # using npm
 npm run ios
