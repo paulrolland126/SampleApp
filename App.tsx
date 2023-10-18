@@ -5,33 +5,20 @@
  * @format
  */
 
-import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import {NavigationContainer} from "@react-navigation/native";
+import React from "react";
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-
-const HomeScreen = () => {
-  return (
-    <SafeAreaView>
-      <Header />
-    </SafeAreaView>
-  );
-}
-
-const Stack = createNativeStackNavigator();
+import {SafeAreaProvider} from "react-native-safe-area-context";
+import RootStack from "./src/navigation/RootStack";
 
 const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
+        <RootStack />
       </NavigationContainer>
     </SafeAreaProvider>
   );
-}
+};
 
 export default App;
